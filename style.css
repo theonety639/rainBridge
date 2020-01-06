@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(bridge.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.rain {
+    background-image: url(rain.png);
+    height: 100vh;/*have to use height here.  using width won't work.*/
+    animation: rain 0.3s linear infinite;/*the background repeats.  This animation makes the top left corner of the first image go 20% to the right and 100% down, but the since the background repeats, a new image on the upper left corner will come up. as the animation happens.*/
+}
+
+@keyframes rain {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 20% 100%;
+    }
+}
